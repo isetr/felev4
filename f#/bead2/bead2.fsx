@@ -12,3 +12,11 @@ let rec fib x =
 let f x = [ for i in 1 .. x do for j in 1 .. i -> i ]
 
 let fact' x = List.fold (fun left right -> left * right) 1 [1 .. x]
+
+let f' x =
+  let rec sum list s =
+    match list with
+      | head :: tail -> sum tail (s + head)
+      | []           -> s
+  sum x 0
+
