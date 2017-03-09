@@ -1,0 +1,30 @@
+V "GNAT Lib v2016"
+A -gnatA
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U linker%b		linker.adb		6e6ebd04 NE OO SU GE
+
+U linker%s		linker.ads		bc65bee6 BN EE NE OO GE
+
+D linker.ads		20170309103550 bc65bee6 linker%s
+D linker.adb		20170309104102 d20b03e2 linker%b
+D system.ads		20160516092930 2da59038 system%s
+X 1 linker.ads
+2+10 Elem 4r46 5r26
+3E10 Index 4r26 7r36 2|1r36
+4A10 Tömb(2+10)<3E10> 7r22 2|1r22
+5V19 Op{boolean} 5>23 2|5s10
+5*23 A{2+10}
+7v10*Linker 7>19 2|1b10 10l5 10t11
+7*19 T{4A10} 2|1b19 4r13 5r13 9r11
+X 2 linker.adb
+2b4 L{boolean}
+4e8 I 5r15 6r17
+

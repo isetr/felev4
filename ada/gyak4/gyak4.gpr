@@ -1,0 +1,7 @@
+project Gyak4 is
+
+   for Source_Dirs use ("../generic/**");
+   for Main use ("LinkerDemo.adb");
+
+end Gyak4;
+
