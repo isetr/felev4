@@ -1,0 +1,12 @@
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.fsproj.HelloWorld.exe.config
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.XML
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Core.dll
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.dll
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.pdb
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.xml
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Core.xml
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
