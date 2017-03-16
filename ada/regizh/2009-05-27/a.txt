@@ -1,0 +1,52 @@
+1. (2-pontos sablonos)
+
+Valósítsd meg a Polinom átlátszatlan típust. A polinomok ilyen alakúak:
+         a0 + a1*x + a2*(x^2) + ... + an*(x^n)
+Az ai együtthatók típusa legyen a sablon csomag paramétere, mégpedig egy
+tetszõleges lebegõpontos típus. A Polinom típus paramétere (diszkriminánsa)
+a maximális fokszám. Készíts adott kitevõhöz tartozó együtthatót (azaz egy
+ai-t) lekérdezõ, illetve beállító mûveletet, valamint * operátort.
+Írj tesztprogramot, melyben Float-tal példányosítod a sablont.
+Segítség: ha a C polinom az A és B polinomok szorzata, akkor C maximális
+fokszáma legyen A és B maximális fokszámának összege, és C i. együtthatójára
+a következõ képlet adható: ci = a0*bi + a1*b(i-1) + ... + ai*b0.
+
+2. (1-pontos sablonos)
+
+Írj feltételes maximumkeresést megvalósító sablon eljárást. A sablon paramétere
+egy tetszõleges Elem típus < és Beta mûvelettel, egy diszkrét Index típus,
+valamint egy, az Elem és Index típusok segítségével felépített, megszorítás
+nélküli indexhatárokkal rendelkezõ tömb típus. Az eljárás bemenõ paramétere
+egy ilyen tömb, kimenõ paramétere pedig egy logikai érték és egy indexpozíció.
+Egy tesztprogramban példányosítsd az eljárást, és keresd meg egy egészeket
+tartalmazó tömb legnagyobb páros elemét.
+
+3. (2-pontos taszkos)
+
+Van két repülõtér, melyek között repülõgépek és helikopterek (közös néven
+légijármûvek) repkednek. Az egyik reptéren 6, a másikon 8 helikopter fér el
+egyidõben. Egy repülõgép két helikopternek megfelelõ helyet foglal, tehát az
+elsõ reptéren például legfeljebb három repülõgép tartózkodhat, vagy mondjuk
+egy repülõgép és négy helikopter. A két reptér között a repülési idõ 2 mp
+repülõgéppel, illetve 3 mp helikopterrel. Ha egy légijármû megérkezik egy
+reptérre, de nem bír leszállni, mert a reptér be van telve, akkor 1 mp-et
+köröz, és utána ismét megpróbálkozik a leszállással. Ha a harmadik
+próbálkozásra sem sikerül leszállnia, lezuhan és megsemmisül. Ha egy légijármû
+leszáll egy reptéren, akkor 2 mp várakozás után ismét felszáll, hogy átrepüljön
+a másik reptérre. Minden légijármû kétszer igyekszik megtenni az oda-vissza
+utat. A fõprogram hozzon létre 10 légijármûvet (véletlenszerûen vagy
+repülõgépet vagy helikoptert) 1 mp-es idõközönként indítva õket. A légijármûvek
+"a levegõben jönnek létre" a kisebbik reptér felett. Modellezd a fentieket
+úgy, hogy a repterek védett típus, a légijármûvek pedig taszk típus
+segítségével legyenek megvalósítva. A repterek diszkriminánsa a méretük,
+a légijármûvek diszkriminánsa pedig a fajtájuk.
+
+4. (1-pontos fájlkezelõs)
+
+Adott egy szövegfájl, amelynek sorai legfeljebb 70 karakter hosszúak.
+A szövegfájlban szavak találhatók egy vagy több szóközzel elválasztva.
+Üres sor (egyetlen szót sem tartalmazó sor) nincs a fájlban.
+A szövegfájlt igazítsuk sorkizártra, 70 karakter szélességûre.
+(Ha egy sor csak egy szót tartalmaz, az a szó balra legyen igazítva.)
+
+

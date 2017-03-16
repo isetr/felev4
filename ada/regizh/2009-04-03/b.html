@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+	<title>1. Ada zh, B csoport</title>
+
+</head>
+<body>
+
+
+
+<center>
+<h1>1. Ada zh, 2009.04.03.</h1>
+<h1>B csoport</h1>
+<hr>
+<h2>A megoldásra 180 perc áll rendelkezésre!</h2>
+</center>
+
+<p>
+
+Segédanyagként <strong>csak</strong> az Ada Reference Manual használható,
+melyet az elkészített megoldások feltöltésére használható oldallal egyetemben
+<a href="http://cfhay.inf.elte.hu/adazh/">itt</a> találni.
+<p>
+Először az első feladatot kell megoldani, utána lehet csak a másodikkal
+pontot szerezni. Ha mindkét feladat megoldása tökéletes, négyes érdemjegyet
+ér. Ötöst az kaphat, aki a megoldásait 120 percen belül feltölti. 
+Nem csak azért jár pontlevonás, ha valaki túl sokáig dolgozik, vagy nem
+működik valamelyik megoldása, hanem azért is, ha nem elég szép az elkészített
+program!
+<hr>
+
+<h2>Első feladat</h2>
+
+Írj sablon függvényt, mely egy függvényt alkalmaz egy tömb minden elemére.
+A függvény paramétere egy A típusú elemekből álló tömb, visszatérési
+értéke pedig egy B típusú elemekből álló, ugyanakkora méretű tömb. A
+függvény, amit a paraméter tömb elemeire alkalmazni kell, ezek szerint
+A-ból B-t csinál. A sablon paraméterek a kétféle tömb típusa (a szükséges
+elem és index típusokkal; a tömbök típusa legyen megszorítás nélküli 
+típus), és az a függvény, amit a tömbelemekre kell alkalmazni.
+A sablon paraméterek legyenek a lehető legáltalánosabbak!
+Példányosítsd ezt a sablont egy olyan függvénnyel, ami egy számhoz
+a felét rendeli (lebegőpontos számként), így teszteld!
+
+<h2>Második feladat</h2>
+
+Készítsünk csomagot, amelynek segítségével ellenőrizni tudjuk egy terepjáró
+mozgását! A csomag valósítsa meg a terepjáró-típust, amelynek műveletei:
+<ul>
+<li> kezdeti terep létrehozása;
+<li> a terepjáró elhelyezése a terepen (megadott koordinátára);
+<li> a terepjáró mozgatása adott irányban (észak, kelet, dél, nyugat), ha
+     ez lehetséges, illetve a mozgathatóság jelzése.
+</ul>
+
+A terep egy 5x5-ös négyzetháló, amelynek minden eleme az adott terület
+magasságát adja meg. A kezdeti terep létrehozásakor ezt egy konstans
+mátrixszal adjuk meg! A terepjáró átmehet egy szomszédos mezőre, ha nem lép
+le a négyzethálóról és a két mező közötti magasságkülönbség nem halad meg
+egy adott értéket. (Ez konstans, legyen 8).
+<p>
+A tesztprogram a terep létrehozása után helyezze el azon a terepjárót,
+majd olvassa be a továbblépési irányokat egészen addig, amíg a terepjáró
+mozoghat az adott irányban!
+
+</body>
+</html>
+

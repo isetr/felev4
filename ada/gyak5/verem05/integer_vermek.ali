@@ -1,0 +1,23 @@
+V "GNAT Lib v2016"
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U integer_vermek%b	integer_vermek.ads	f8176db1 NE OO PK
+W vermek%s		vermek.adb		vermek.ali  AD
+
+U integer_vermek%s	integer_vermek.ads	804732fe EB NE OO PK
+W vermek%s		vermek.adb		vermek.ali  AD
+
+D integer_vermek.ads	20170316092328 f8176db1 integer_vermek%s
+D integer_vermek.ads	20170316092328 f8176db1 integer_vermek%b
+D system.ads		20160516092930 2da59038 system%s
+D vermek.ads		20170316092340 78505f4f vermek%s
+D vermek.adb		20170316092336 0c28c8e9 vermek%b
+X 2 integer_vermek.ads
+2K9*Integer_Vermek[4|5]
+X 4 vermek.ads
+5k9*Vermek 2|1w6 2r31 4|22e11
+

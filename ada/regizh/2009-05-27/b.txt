@@ -1,0 +1,52 @@
+1. (2-pontos sablonos)
+
+Valósítsd meg a Polinom korlátozott átlátszatlan típust. A polinomok ilyen
+alakúak:  a0 + a1*x + a2*(x^2) + ... + an*(x^n)
+Az ai együtthatók típusa legyen a sablon csomag paramétere, mégpedig egy
+tetszõleges lebegõpontos típus. A típus reprezentálásához használj láncolt
+listát, melyben a nemnulla együtthatókat tárolod. Ne feledkezz meg a már
+nem használt elemek felszabadításáról. (Használd a Limited_Controlled típust.)
+Valósíts meg adott kitevõhöz tartozó együtthatót (azaz egy ai-t) lekérdezõ,
+illetve beállító mûveleteket, valamint a + operátort. 
+Írj tesztprogramot, melyben Float-tal példányosítod a sablont.
+
+2. (1-pontos sablonos)
+
+Írj lineáris keresést megvalósító sablon eljárást. A sablon paramétere
+egy tetszõleges Elem típus egy Beta mûvelettel, egy diszkrét Index típus,
+valamint egy, az Elem és Index típusok segítségével felépített, megszorítás
+nélküli indexhatárokkal rendelkezõ tömb típus. Az eljárás bemenõ paramétere
+egy ilyen tömb, kimenõ paramétere pedig egy logikai érték és egy indexpozíció.
+Egy tesztprogramban példányosítsd az eljárást, és keresd meg egy egészeket
+tartalmazó tömb legelsõ olyan elemét, amely osztható a (2,3,5,7,11,13,17,19)
+tömb valamelyik elemével. A fenti tömböt beégetheted a tesztprogramba.
+
+3. (2-pontos taszkos)
+
+Egy városban a polgárok ügyes-bajos dolgaikat szeretnék intézni. Az ügyintézés
+ebben (?) a városban úgy történik, hogy az ember elmegy a városházára, ahonnan
+elküldik a postára formanyomtatványért. Utána visszamegy a városházára, ahol
+is közlik vele, hogy egy okmánybélyeget is kell vennie. Ezért ismét elmegy
+a postára, majd ismét irány a városháza, ahol végre elintézik az ügyeit.
+A város nagy, ezért a polgárok autóval vagy motorkerékpárral közlekednek a
+városháza és a posta között. Autóval 3, motorral 4 másodperc az út. Sajnos,
+parkolóhely a városban nem sok van. Van egy-egy parkolóház a városháza és a
+posta elõtt 8, illetve 6 autónyi férõhellyel. Egy autónyi férõhelyen két
+motor fér el. Ha a parkoló tele va, akkor a polgár tesz egy kört a háztömb
+körül (1 másodperc), és újra megpróbál leparkolni a parkolóházban. Ha
+harmadszorra sem sikerül leparkolnia, szétdurran a feje a méregtõl.
+A parkolóban mindig két másodpercet parkol a polgár. A fõprogram
+másodpercenként indítson útnak 1 polgárt (összesen 10-et) a városházára.
+A parkolóházakat védett típus, a polgárokat taszk típus segítségével
+modellezd. A parkolóházak diszkriminánsa a férõhelyek száma, a polgárok
+diszkriminánsa az, hogy autójuk vagy motorjuk van-e.
+
+4. (1-pontos fájlkezelõs)
+
+Adott egy szövegfájl, melynek minden sora pontosan egy szót tartalmaz. A
+szavak (sorok) legfeljebb 50 karakter hosszúak. Készítsünk olyan fájlt,
+amely pontosan ugyanazokat a szavakat tartalmazza ugyanabban a sorrendben,
+de egy sorban annyi szót, amennyi csak elfér. A kimenetfájl sorainak
+hossza legfeljebb 70 karakter legyen.
+
+
