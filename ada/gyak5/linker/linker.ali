@@ -1,0 +1,27 @@
+V "GNAT Lib v2016"
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U linker%b		linker.adb		3bb5620c NE OO SU GE
+
+U linker%s		linker.ads		a2a9a6a1 BN EE NE OO GE
+
+D linker.ads		20170316100010 a2a9a6a1 linker%s
+D linker.adb		20170316100956 991cc4ad linker%b
+D system.ads		20160516092930 2da59038 system%s
+X 1 linker.ads
+2+14 Elem 4r46 5r26
+3E10 Index 4r26 7r52 2|1r52
+4A10 Tömb(2+14)<3E10> 7r23 2|1r23
+5V19 Op{boolean} 5>23 2|5s20
+5*23 A{2+14}
+7u11*Linker 7>20 7<29 7<45 2|1b11 10l5 10t11
+7*20 T{4A10} 2|1b20 4r26 5r23
+7b29 L{boolean} 2|1b29 3m9 7m25
+7*45 E{3E10} 2|1b45 6m25
+X 2 linker.adb
+4e13 I 5r25 6r30
+
