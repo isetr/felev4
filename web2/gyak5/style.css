@@ -1,0 +1,44 @@
+body {
+    background: black;
+}
+
+#p1,
+#p2 {
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    background: white;
+}
+
+#p1 {
+    left: 0;
+}
+
+#p2 {
+    right: 0;
+}
+
+#ball {
+    width: 30px;
+    height: 30px;
+    background: white;
+    position: absolute;
+}
+
+#p1score,
+#p2score {
+    font-size: 50px;
+    font-family: Courier New, Courier, monospace;
+    position: absolute;
+    background: white;
+}
+
+#p1score {
+    top: 0;
+    left: 0;
+}
+
+#p2score {
+    top: 0;
+    right: 0;
+}
