@@ -1,0 +1,8 @@
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\Lathatosag.exe.config
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\Lathatosag.XML
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\Lathatosag.exe
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\Lathatosag.pdb
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\FSharp.Core.dll
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\bin\Debug\FSharp.Core.xml
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\obj\Debug\Lathatosag.exe
+D:\_git\felev4\f#\gyak5\Lathatosag\Lathatosag\obj\Debug\Lathatosag.pdb
