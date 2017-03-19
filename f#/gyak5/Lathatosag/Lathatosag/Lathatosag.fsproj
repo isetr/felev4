@@ -53,6 +53,7 @@
     <Compile Include="ModuleA.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <None Include="Poker.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
