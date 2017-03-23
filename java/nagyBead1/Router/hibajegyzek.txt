@@ -1,0 +1,21 @@
+# Hibajegyzék
+
+2017. 03. 15.
+
+  - Kiemelve, hogy melyek a nyilvános metódusok és adattagok,
+    melyek nem.
+
+  - A tesztelő hibát jelez, ha az adattagok nem rejtettek.
+
+2017. 03. 17.
+  
+  - Pótolva a `Packet.getData()` hiányzó leírása.
+
+2017. 03. 22.
+
+  - A tesztelő hibát jelez, ha egy `Node` objektum az `IPAddress`
+    objektumok egyenlőségének vizsgálatára nem az `isTheSame()`
+    metódust használja.
+
+  - Új teszteset hozzádva a `route()`-hoz, a `traceRoute()`-nak eggyel
+    hosszabb útvonalat kell felderítenie.
