@@ -20,7 +20,7 @@ procedure maintable is
             for I in Positive range 1..5 loop
                 begin
                     People_Tables.Insert(People_5,(Kor=>I*3+5,Money=>I*200+10000));
-                    People_Temp := People_Tables.getTable(People_5);
+                    People_Temp := People_Tables.Get_Table(People_5);
                     for J in Positive range 1..I loop
                         if People_Temp(J).Kor /= J*3+5 or People_Temp(J).Money /= J*200+10000 then
                             return false;

@@ -6,8 +6,8 @@ procedure mainsort is
     function TestSort return Boolean is
         type Int_Array is array(Positive range<>) of Integer;
 
-        function Asc(A,B : in Integer) return Boolean is (A > B);
-        function Desc(A,B : in Integer) return Boolean is (A < B);
+        function Asc(A,B : in Integer) return Boolean is (A < B);
+        function Desc(A,B : in Integer) return Boolean is (A > B);
 
         procedure Sort_Asc is new Sort(Item=>Integer, Index=>Positive, Item_Array=>Int_Array,"<"=>Asc);
         procedure Sort_Desc is new Sort(Item=>Integer, Index=>Positive, Item_Array=>Int_Array,"<"=>Desc);

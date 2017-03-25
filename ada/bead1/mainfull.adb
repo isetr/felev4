@@ -53,7 +53,7 @@ procedure mainFull is
             for I in Positive range 1..5 loop
                 begin
                     People_Tables.Insert(People_5,(Kor=>I*3+5,Money=>I*200+10000));
-                    People_Temp := People_Tables.getTable(People_5);
+                    People_Temp := People_Tables.Get_Table(People_5);
                     for J in Positive range 1..I loop
                         if People_Temp(J).Kor /= J*3+5 or People_Temp(J).Money /= J*200+10000 then
                             return false;
@@ -116,7 +116,7 @@ procedure mainFull is
                 return false;
             end if;
             Sort1(People_5);
-            People_Temp := People_Tables.getTable(People_5);
+            People_Temp := People_Tables.Get_Table(People_5);
             for I in Positive range 1..5 loop
                 if People_Temp(I).Kor /= 23-I*3 then
                     return false;
