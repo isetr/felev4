@@ -25,7 +25,7 @@ module TP =
 
     type CSV = CsvProvider<samplepath>
 
-    let ReadFiles (path: string) =
+    let ReadFiles (path': string) =
         let load = CSV.Load(path)
         let rows = load.Rows
         [
