@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0043)http://zsv.web.elte.hu/ada_regizhk/erdo.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+</head><body><h1 id="sablon_f+ggv+ny_fi+k+k_az_erd+ben">SABLON FÜGGVÉNY: FIÓKÁK AZ ERDŐBEN</h1>
+<h3 id="kettes+rt">Kettesért</h3>
+<p>Egy <code>NxM</code>-es mátrix-szerűen felparcellázott erdős területen madárkák 
+fészkelnek. Minden parcellában maximum egy fészek lehet. Minden fészekben 
+fiókák kelnek ki tavasszal.</p>
+<p>Írj sablon függvényt Count névvel, amely egy  adott  erdős területen kikelt tavaszi fiókák összes számát adja meg!</p>
+<ul>
+<li>A sablon paramétere legyen: <ul>
+<li>Az <code>NxM</code>-es területet reprezentáló mátrix index típusa (diszkrét)</li>
+<li>Maga az <code>NxM</code>-es mátrix típusa <code>Grid</code> névvel (megszorítás nélküli indexhatárú, természetes szám típusú elemekkel)</li>
+</ul>
+</li>
+<li>A <code>Count</code> nevű  függvény  paramétere legyen egy <code>Grid</code>,
+ mely megadja, hogy az adott erdő egyes parcelláiban hány fióka kelt ki 
+(0 az érték, ha nem volt fészek, vagy nem keltek ki fiókák, egyébként 
+pozitív egész szám)</li>
+<li>A <code>Count</code> nevű  függvény visszatérési értéke a kapott erdős területen kikelt tavaszi fiókák száma.</li>
+</ul>
+<p>Egy demo programban reprezentáld egy <code>10x10</code>-es erdőterületen az idén kikelt fiókák számát. Tölts fel egy mátrixot adatokkal, és a <code>Count</code> 
+nevű sablon függvényt példányosítva számold ki, összesen hány fióka kelt ki az erdőben.</p>
+<h3 id="h+rmas+rt">Hármasért</h3>
+<p>Írj sablon függvényt <code>Less_Than</code> névvel, amely egy  adott  erdős területről eldönti, hogy több fióka kelt-e ki összesen, mint egy előre megadott
+<code>Max</code> érték! Ne járd be a teljes mátrixot, ha nem kell, azaz 
+lépj ki, mikor elérted a kívánt határt. A sablon paraméterei egyezzenek 
+meg a <code>Count</code> sablon paramétereivel.</p>
+<ul>
+<li>A <code>Less_Than</code> nevű  függvény  paramétere legyen:<ul>
+<li>egy <code>Grid</code>, melynek elemei megadják, hogy az adott erdő parcelláiban hány fióka kelt ki</li>
+<li>és <code>Max</code> (a határszám, egy természetes szám)</li>
+</ul>
+</li>
+<li>A <code>Less_Than</code> nevű  függvény visszatérési értéke: kikelt-e több mint <code>Max</code> számú fióka.</li>
+</ul>
+<p>A  demo programban teszteld egy <code>10x10</code>-es erdőterületen az idén kikelt fiókák számára vonatkozóan a <code>Less_Than</code> vizsgálatot is.</p>
+<h3 id="n+gyes+rt">Négyesért</h3>
+<p>Írj <code>Count_Value</code> névvel a <code>Count</code>-hoz hasonló sablon függvényt a következő 
+kiegészítésekkel:</p>
+<ol>
+<li>A sablonnak az alábbi paraméterei legyenek:<ul>
+<li>Az <code>NxM</code>-es területet reprezentáló mátrix index típusa (diszkrét)</li>
+<li>Maga az <code>NxM</code>-es mátrix típusa <code>Grid</code> névvel (megszorítás nélküli indexhatárú, <code>Element</code> típusú elemekkel)</li>
+<li>a <code>Grid</code> típusú mátrixban szereplő elemek típusa <code>Element</code> névvel (átlátszatlan)</li>
+<li>egy <code>Predicate</code> nevű logikai értéket visszaadó függvény, mely egy adott <code>Element</code> típusú elemen értelmezett, és eldönti, hogy rendelkezik-e egy parcella egy adott tulajdonsággal</li>
+</ul>
+</li>
+<li>A  <code>Count_Value</code> függvény paramétere egy erdőterület parcelláin kikelt fiókák számát reprezentáló <code>Grid</code></li>
+<li>A  <code>Count_Value</code> függvény eldönti, hogy hány adott (<code>Predicate</code>) tulajdonságú elem van a paramétereként megadott erdőterületen.
+A demo programban példányosítsd úgy, hogy lehetővé tegye azon fészkek megszámolását, ahol több, mint 3 fióka kelt ki.</li>
+</ol>
+<h3 id="+t+s+rt">Ötösért</h3>
+<p>Írj <code>Migrate</code> névvel egy olyan sablon eljárást, amely ha <code>Max</code> számú fiókánál több van egy fészekben, akkor megpróbálja átrakni valamelyik szomszédos 
+fészekbe a többletfiókákat. A <code>Grid</code> átrendezését helyben végezd. Azokat a fiókákat, amiket nem sikerül helyhiány miatt átrakni, veszteség listára 
+írjuk (csak gondolatban). A sablon paraméterei az index és a <code>Grid</code> típus legyenek. A függvényparaméterek egy <code>Grid</code> és a <code>Max</code> érték legyenek.</p>
+
+</body></html>
