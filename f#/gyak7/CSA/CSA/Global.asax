@@ -1,0 +1,1 @@
+<%@ Application Inherits="CSA.Global" %>
