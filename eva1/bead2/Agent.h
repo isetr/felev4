@@ -11,28 +11,28 @@ struct Agent {
     void move(char dir) {
         switch(dir) {
             case 'N':
-                coord = QPoint(coord.x, coord.y - 1);
+                coord += QPoint(0,-1);
             break;
             case 'S':
-                coord = QPoint(coord.x, coord.y + 1);
+                coord += QPoint(0,1);
             break;
             case 'W':
-                coord = QPoint(coord.x - 1, coord.y);
+                coord += QPoint(-1,0);
             break;
             case 'E':
-                coord = QPoint(coord.x + 1, coord.y);
+                coord += QPoint(1,0);
             break;
         }
     }
-}
+};
 
 struct Enemy : public Agent {
     Enemy(QPoint Coord, char Dir) : Agent(Coord), dir(Dir) {}
     char dir;
     void move() {
-        move(dir);
+        Agent::move(dir);
     }
-}
+};
 
 
 #endif // Agent_H

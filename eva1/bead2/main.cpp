@@ -1,10 +1,10 @@
-#include <QCoreApplication>
+#include <QApplication>
 #include "gamewindow.h"
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
     GameWindow w;
-    w.run();
+    w.show();
     return a.exec();
 }

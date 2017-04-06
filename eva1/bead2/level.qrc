@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>level/easy.txt</file>
+        <file>level/hard.txt</file>
+        <file>level/medium.txt</file>
+    </qresource>
+</RCC>

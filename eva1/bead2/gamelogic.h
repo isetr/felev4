@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QVector>
 #include <QString>
+#include <QKeyEvent>
 
 #include "Agent.h"
 
@@ -38,7 +39,7 @@ private:
     Agent* player;
     QVector<Enemy*> enemies;
     QPoint* exit;
-    Qtimer* timer;
+    QTimer* timer;
 };
 
 #endif // GAMELOGIC_H
