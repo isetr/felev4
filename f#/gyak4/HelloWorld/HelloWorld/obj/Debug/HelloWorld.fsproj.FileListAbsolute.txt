@@ -10,3 +10,16 @@ C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.
 C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Core.xml
 C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
 C:\Users\Setr\Dropbox\_uni\F#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.XML
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Core.dll
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.dll
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.pdb
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Data.xml
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\bin\Debug\FSharp.Core.xml
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.fsprojResolveAssemblyReference.cache
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.fsproj.HelloWorld.exe.config
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+d:\_git\felev4\f#\gyak4\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

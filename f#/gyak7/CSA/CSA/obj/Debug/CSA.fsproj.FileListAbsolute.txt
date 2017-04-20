@@ -34,3 +34,4 @@ D:\_git\felev4\f#\gyak7\CSA\CSA\bin\WebSharper.UI.Next.Templating.xml
 D:\_git\felev4\f#\gyak7\CSA\CSA\bin\WebSharper.Web.xml
 D:\_git\felev4\f#\gyak7\CSA\CSA\obj\Debug\CSA.dll
 D:\_git\felev4\f#\gyak7\CSA\CSA\obj\Debug\CSA.pdb
+d:\_git\felev4\f#\gyak7\CSA\CSA\obj\Debug\CSA.fsprojResolveAssemblyReference.cache
