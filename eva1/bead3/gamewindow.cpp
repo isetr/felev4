@@ -22,6 +22,12 @@ GameWindow::GameWindow(QWidget *parent) : QWidget(parent) {
     btn6 = new QPushButton(trUtf8("6x6"));
     connect(btn6, SIGNAL(clicked()), this, SLOT(newGame()));
 
+    btnSave = new QPushButton(trUtf8("Save"));
+    connect(btn6, SIGNAL(clicked()), this, SLOT(saveGame()));
+
+    btnLoad = new QPushButton(trUtf8("Load"));
+    connect(btn6, SIGNAL(clicked()), this, SLOT(loadGame()));
+
     QHBoxLayout* hlayout = new QHBoxLayout();
     hlayout->addWidget(btn3);
     hlayout->addWidget(btn4);
@@ -48,6 +54,7 @@ void GameWindow::newGame() {
     }
 
     mapLayout.clear();
+    selected = nullptr;
 
     if(QObject::sender() == btn3) {
         game->newGame(3);
@@ -59,11 +66,12 @@ void GameWindow::newGame() {
 
     btnPause->setEnabled(true);
 
-    QVector<QString> localMap = game->getMap();
+    int** localMap = game->getMap();
+    int size = game->getSize();
 
-    for(int i = 0; i < localMap.size(); ++i) {
-        for(int j = 0; j < localMap.size(); ++j) {
-            QPushButton* btn = new QPushButton();
+    for(int i = 0; i < size; ++i) {
+        for(int j = 0; j < size; ++j) {
+            CoordButton* btn = new QPushButton(QPoint(i, j));
             QString color;
 
             switch(localMap[i][j]) {
@@ -82,16 +90,18 @@ void GameWindow::newGame() {
             btn->setStyleSheet(style);
             btn->setEnabled(false);
             gridLayout->addWidget(btn, i, j);
-            
+            QObject::connect(btn, SIGNAL(clicked()), this, SLOT(chooseToFrom()));
             mapLayout.append(btn);
         }
     }
 }
 
-void GameWindow::draw() {
-    QVector<QString> localMap = game->getMap();
-    for(int i = 0; i < localMap.size(); ++i) {
-        for(int j = 0; j < localMap.size(); ++j) {
+void GameWindow::draw(int currentPlayer) {
+    int** localMap = game->getMap();
+    int size = game->getSize();
+
+    for(int i = 0; i < size; ++i) {
+        for(int j = 0; j < size; ++j) {
             QString color;
 
             switch(localMap[i][j]) {
@@ -106,19 +116,60 @@ void GameWindow::draw() {
                 break;
             }
 
+            mapLayout[i * localMap.size() + j]->setEnabled(false);
+            if(localMap[i][j] == currentPlayer || localMap[i][j] == 2) {
+                mapLayout[i * localMap.size() + j]->setEnabled(true);
+            }
+
             QString style = "QPushButton { background-color: " + color + " }";
             mapLayout[i * localMap.size() + j]->setStyleSheet(style);
         }
     }
 }
 
-void GameWindow::gameOverHandler(bool isWon) {
-    if(isWon) {
+void GameWindow::gameOverHandler(int winner) {
+    if(winner == 0) {
         QMessageBox::information(this, trUtf8("Játék vége"),
-                                 trUtf8("Sikeresen kijutottál!"));
+                                 trUtf8("Az 1. Játékos nyert!"));
+    } else if(winner == 1) {
+        QMessageBox::information(this, trUtf8("Játék vége"),
+                                 trUtf8("A 2. játékos nyert!"));
     } else {
         QMessageBox::information(this, trUtf8("Játék vége"),
-                                 trUtf8("Elkaptak az őrök!"));
+                                 trUtf8("A játék döntetlen!"));
     }
-    btnPause->setEnabled(false);
+}
+
+void GameWindow::loadGame() {
+    if (game.loadGame(loadGameWidget->selectedGame()))
+    {
+        draw();
+        QMessageBox::information(this, trUtf8("Kitolás"), trUtf8("Játék betöltve!");
+    }
+    else
+    {
+        QMessageBox::warning(this, trUtf8("Kitolás"), trUtf8("A játék betöltése sikertelen!"));
+    }
+}
+
+void GameWindow::saveGame() {
+    if (game.saveGame(saveGameWidget->selectedGame()))
+    {
+        updadrawte();
+        QMessageBox::information(this, trUtf8("Kitolás"), trUtf8("Játék sikeresen mentve!"));
+    }
+    else
+    {
+        QMessageBox::warning(this, trUtf8("Kitolás"), trUtf8("A játék mentése sikertelen!"));
+    }
+}
+
+void GameWindow::chooseToFrom() {
+    if(selected == nullptr) {
+        selected = qobject_cast<CoordButton*>(sender());
+    } else {
+        CoordButton* dest = qobject_cast<CoordButton*>(sender());
+        emit move(selected.getCoord(), dest.getCoord());
+        selected = nullptr;
+    }
 }

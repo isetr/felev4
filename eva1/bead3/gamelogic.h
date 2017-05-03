@@ -15,7 +15,8 @@ public:
     explicit GameLogic(QObject *parent = 0);
     ~GameLogic();
 
-    const QVector<QString> getMap() { return map; }
+    int** getMap() const { return map; }
+    int getSize() const { return size; }
 
 public slots:
     void newGame(int size);
@@ -26,7 +27,7 @@ public slots:
 
 signals:
     void gameOver(int winner);
-    void update(int turn);
+    void update(int currentPlayer);
 
 private:
     int countTokens(int player);

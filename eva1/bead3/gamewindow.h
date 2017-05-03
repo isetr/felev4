@@ -5,10 +5,12 @@
 #include <QVector>
 #include <QVBoxLayout>
 #include <QMainWindow>
-#include <QKeyEvent>
 #include <QPoint>
 
 #include "gamelogic.h"
+#include "loadgamewidget.h"
+#include "savegamewidget.h"
+#include "coordbutton.h"
 
 class GameWindow : public QWidget
 {
@@ -22,20 +24,28 @@ signals:
 
 private slots:
     void newGame();
-    void draw();
+    void draw(int currentPlayer);
     void gameOverHandler(bool isWon);
     void loadGame();
     void saveGame();
 
 private:
+    void chooseToFrom();
+
     GameLogic* game;
     
     QPushButton* btn3;
     QPushButton* btn4;
     QPushButton* btn6;
+    QPushButton* btnSave;
+    QPushButton* btnLoad;
     QVBoxLayout* vBoxLayout;
     QGridLayout* gridLayout;
-    QVector<QPushButton*> mapLayout;
+    QVector<CoordButton*> mapLayout;
+    CoordButton* selected;
+
+    SaveGameWidget* saveGameWidget; // a mentést biztosító ablak
+    LoadGameWidget* loadGameWidget; // a betöltést biztostó ablak
 };
 
 #endif // GAMEWINDOW_H
