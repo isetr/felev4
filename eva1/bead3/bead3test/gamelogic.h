@@ -12,7 +12,7 @@ class GameLogic : public QObject
 {
     Q_OBJECT
 public:
-    explicit GameLogic(QObject *parent = 0);
+    explicit GameLogic(DataAccess* dataAccess, QObject *parent = 0);
     ~GameLogic();
 
     QVector<QVector<int>> getMap() const { return map; }
@@ -40,7 +40,7 @@ private:
     int turns;
     int currentPlayer;
     int* tokens;
-    DataAccess dataAccess;
+    DataAccess* dataAccess;
 };
 
 #endif // GAMELOGIC_H

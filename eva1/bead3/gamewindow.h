@@ -25,13 +25,14 @@ signals:
 private slots:
     void newGame();
     void draw(int currentPlayer);
-    void gameOverHandler(bool isWon);
+    void gameOverHandler(int winner);
     void loadGame();
     void saveGame();
+    void chooseToFrom();
+    void loadBtn();
+    void saveBtn();
 
 private:
-    void chooseToFrom();
-
     GameLogic* game;
     
     QPushButton* btn3;

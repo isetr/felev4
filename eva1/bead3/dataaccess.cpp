@@ -30,10 +30,10 @@ bool DataAccess::loadGame(int gameIndex, QVector<int> &saveGameData)
 
     QTextStream stream(&file);
 
-    saveGameData.resize(11);
+    saveGameData.resize(64);
 
     // soronként beolvassuk az adatokat a fájlból
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < saveGameData.size(); i++)
         saveGameData[i] = stream.readLine().toInt();
 
     file.close();
@@ -50,7 +50,7 @@ bool DataAccess::saveGame(int gameIndex, const QVector<int> &saveGameData)
     QTextStream stream(&file);
 
     // soronként egy adatot írunk ki
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < saveGameData.size(); i++)
         stream << saveGameData[i] << endl;
 
     file.close();

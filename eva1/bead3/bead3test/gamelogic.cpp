@@ -6,11 +6,12 @@
 #include <ctime>
 #include <math.h>
 
-GameLogic::GameLogic(QObject *parent) : QObject(parent) {
+GameLogic::GameLogic(DataAccess* dataAccess, QObject *parent) : QObject(parent) {
     size = -1;
     turns = -1;
     currentPlayer = -1;
     tokens = nullptr;
+    this->dataAccess = dataAccess;
 }
 
 GameLogic::~GameLogic() {
@@ -58,7 +59,7 @@ void GameLogic::newGame(int size) {
 bool GameLogic::loadGame(int gameIndex) {
     QVector<int> saveGameData;
 
-    if (!dataAccess.loadGame(gameIndex, saveGameData)) {
+    if (!dataAccess->loadGame(gameIndex, saveGameData)) {
         return false;
     }
 
@@ -97,11 +98,11 @@ bool GameLogic::saveGame(int gameIndex) {
         }
     }
 
-    return dataAccess.saveGame(gameIndex, saveGameData);
+    return dataAccess->saveGame(gameIndex, saveGameData);
 }
 
 QVector<QString> GameLogic::saveGameList() const {
-    return dataAccess.saveGameList();
+    return dataAccess->saveGameList();
 }
 
 void GameLogic::stepGame(QPoint from, QPoint to) {
