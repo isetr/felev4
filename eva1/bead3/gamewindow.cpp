@@ -141,6 +141,7 @@ void GameWindow::gameOverHandler(int winner) {
 void GameWindow::loadGame() {
     if (game->loadGame(loadGameWidget->selectedGame()))
     {
+        newGame();
         draw(game->getCurrentPlayer());
         QMessageBox::information(this, trUtf8("Kitolás"), trUtf8("Játék betöltve!"));
     }
