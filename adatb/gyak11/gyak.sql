@@ -61,3 +61,6 @@ accept c_onev varchar(1) prompt  'add ...';
 --to update
 cursor curs1 is select * from dolgozo order by dnev for update of fizetes
 update dolgozo set fizetes = fizetes + 1 where current of curs1;
+
+--regex count
+regexp_count('almafa', '[a,e,i,o,u]', 1);
