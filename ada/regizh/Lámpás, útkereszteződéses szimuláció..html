@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://zsv.web.elte.hu/ada_regizhk/utkereszt.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Lámpás, útkereszteződéses szimuláció.</title>
+
+<style type="text/css">
+ body {
+ 	background:#333333;
+	
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0;
+	text-align: left;
+	word-spacing: normal;
+	text-decoration: none;
+	color: #444;
+	text-align:justify;
+ }
+ 
+ div#content {
+ 	margin: 0px 15px;
+	padding: 25px;
+	background:#FFFFFF;
+ }
+ 
+ div.inner{
+ 	padding-left:25px;
+	margin-top:2px;
+	margin-bottom:2px;
+ }
+ 
+ ul#exercises {
+ 	list-style:none;
+ }
+ 
+ ul#exercises li {
+ 	margin-top:10px;
+ }
+ 
+ p {
+ 	font-family: Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0;
+	text-align: left;
+	word-spacing: normal;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	text-align:justify;
+ }
+
+ orange {
+ 	
+	color: 	#FF7F00;
+	
+ }
+ blue {
+ 	
+	color: 	#003399;
+	
+ }
+ 
+ bn {
+ 	
+	font-size: 14px;
+	
+ }
+ 
+</style>
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+<div id="content">
+<h3 align="center">Ada 2. zh<br>
+Lámpás, útkereszteződéses szimuláció.</h3>
+<p>A feladat az, hogy szimuláljuk egy útkereszteződésben a jelzőlámpa működését, valamint ennek hatására az autók mozgását. </p>
+<p><bn><strong>Részfeladatok a jegyekért:</strong></bn><br>
+<br>
+<strong>2-esért:</strong><br>
+  Készíts egy diszkrét <orange>lampaszinek</orange>  típust a következő típusértékekkel: <blue>piros</blue>,<blue>sarga</blue>,<blue>pirossarga</blue>,<blue>zold</blue><br>
+  Készíts egy <orange>jelzolampa</orange> nevű védett egységet, a következőkkel! (ha nagyon nem megy, lehet taszk is, ekkor a következőket fogalmazd át a taszkoknál megszokott módon…)<br>
+  A <orange>jelzolampa</orange> –nak legyen egy <orange>valt</orange> nevű (paraméter nélküli) eljárása,egy <orange>szin</orange> nevű <orange>lampaszinek</orange> visszatérési értékű függvénye, valamint egy <orange>aktszin</orange> nevű <orange>lampaszinek</orange>  típusú <blue>piros</blue> alapértelmezett értékű privát változója.<br>
+  A <orange>szin</orange> függvény adja vissza <orange>aktszin</orange> értékét.<br>
+  A <orange>valt</orange> eljárás minden hívásakor váltsa az <orange>aktszin</orange> értékét ciklikusan, és írja ki az aktuális értéket.<br>
+  <br>
+  Készíts egy <orange>utemezo</orange> taszkot, amely váltogatja a lámpát a következőképpen:<br>
+  Vált, majd vár 3.0 mp-ig, <br>
+  Vált, majd vár 0.5 mp-ig,  <br>
+  Vált, majd vár 2.0 mp-ig,  <br>
+  Vált, majd vár 1.0 mp-ig,<br>
+  és ezt <strong>3-szor ismétli meg!</strong><br>
+  <br>
+ <bn><strong>+</strong></bn> pontért a kiírásokat (is) védett egységgel valósítsad meg!<br>
+ <bn><strong>+</strong></bn> pontért kezelhetsz kivételt<br>
+  
+  </p>
+<p><strong>3-asért:</strong><br>
+  Készíts <orange>auto</orange> taszk-típust a következő paraméterekkel/diszkriminánsokkal:<br>
+  </p><div class="inner"> <orange>rendszam</orange>: string-mutató típusú<br> 
+   <orange>menetidoalampaig</orange>:<strong>access</strong> duration típusú<br>
+   </div>
+Az <orange>auto</orange> taszk írja ki a rendszámát, valamint, hogy elindult, majd várjon a paraméterül kapott ideig, majd írja ki, hogy odaért a lámpához. Ezután álljon be a <orange>jelzolampa athalad</orange> –nevű belépési pontjának várakozási sorába (hívja meg azt), egészen addig, amíg nem tud áthaladni, 0.2 másodpercenként írja ki a rendszámát, és, hogy a lámpánál várakozik. Ha át tudott haladni, érjen véget.<br>
+Ehhez készítsed el a <orange>jelzolampa athalad</orange> belépési pontját is, melyen azzal a feltétellel fogad, hogy a lámpa aktuális színe zöld.<br>
+Készíts autókra mutató mutató-típusokból álló tömböt, és a főprogramban indíts el 3 autót 3 különböző rendszámmal, a következő menetidőkkel: 1.5, 3.3, 7.5<br>
+<br>
+Ha azt, hogy hány autó induljon el, milyen menetidőkkel és milyen rendszámmal fájlból olvasod be, akkor <bn><strong>+1 jegy</strong></bn><br>
+
+<p></p>
+<p><strong>4-esért:</strong><br>
+Készíts egy <orange>iranyok</orange> nevű felsorolási típust, a következő típusértékekkel: <blue>egyenesen_megy</blue>,<blue>fordul</blue><br>
+Készíts egy védett egységet, mellyel irányokat generálsz véletlenszerűen, és ezt a generált irányt írják ki az autók, amikor áthaladnak a lámpán, jelezve, hogy merre mennek…<br>
+
+
+</p>
+<p><strong>5-ösért:</strong><br>
+Módosítsad úgy az <orange>utemezo</orange>-t, hogy ha meghívják a <orange>leall</orange> belépési pontját, akkor álljon le, ne a fix 3 iteráció után!!!<br>
+Ezt egy <orange>lampaszerelo</orange> taszk hívja meg 15 mp-cel a szimuláció indítása után, majd írja ki, hogy „a szimuláció végetért”.<br>
+Ha meghívják a belépési pontot, akkor az utolsó váltás, és 1.0 mp-es várakozás után fogadja a hívást, különben írja ki, hogy „a szimuláció fut tovább”,és folytassa az iterációt.<br>
+
+
+</p>
+
+
+
+<p><bn>Eredményes munkát kívánunk!</bn></p>
+
+</div>
+
+
+</body></html>

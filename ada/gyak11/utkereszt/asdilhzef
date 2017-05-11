@@ -1,0 +1,29 @@
+protected lampa
+		proc valt
+		func szin return szin
+	private
+		aktszin: szin
+
+prot body lampa
+	proc valt is
+		if aktszin zold then
+			aktszin := piros
+		else 
+			aktszin := szin'Succ(aktszin)
+		
+		put_line(szin'Image(aktszin))
+		
+	fun szin return szin is
+		return aktszin
+		
+task utemezo
+task body utemezo
+	for i in 1..3 loop
+		lampa.valt
+		delay 3.0
+		lampa.valt
+		delay 0.5
+		lampa.valt
+		delay 2.0
+		lampa.valt
+		delay 1.0
