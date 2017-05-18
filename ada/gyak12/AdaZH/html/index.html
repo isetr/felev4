@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kísértetkastély</title>
+
+<style type="text/css">
+ body {
+ 	background:#333333;
+	
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0;
+	text-align: left;
+	word-spacing: normal;
+	text-decoration: none;
+	color: #444;
+	text-align:justify;
+ }
+ 
+ div#content {
+ 	margin: 0px 15px;
+	padding: 25px;
+	background:#FFFFFF;
+ }
+ 
+ div.inner{
+ 	padding-left:25px;
+	margin-top:2px;
+	margin-bottom:2px;
+ }
+ 
+ ul#exercises {
+ 	list-style:none;
+ }
+ 
+ ul#exercises li {
+ 	margin-top:10px;
+ }
+ 
+ p {
+ 	font-family: Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0;
+	text-align: left;
+	word-spacing: normal;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	text-align:justify;
+ }
+
+</style>
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+<div id="content">
+<h3 align="center">Ada 2. zh<br />
+Kísértetkastély</h3>
+<p>A gonosz  Kartoffel gróf bosszúból kísértetkastélyába zárta a Sajthegyi király szépséges  lányát, amiért az nem ment hozzá feleségül. A kastélyban szellemek tanyáznak,  akik bárhol megjelenhetnek, és a folyósókon megijeszthetik az arra járókat. </p>
+<p><strong>Ami adott:</strong><br />
+  A kastély  alaprajza egy 5x5-ös mátrix, melyben a mezők a következő típusúak lehetnek:  fal, szoba, folyósó, kijárat. Egy pozícióról a  GetField függvénnyel kérheted le, hogy fal, folyósó, szoba, vagy kijárat típusú mező-e (<strong>W</strong>all,<strong>C</strong>orridor,<strong>R</strong>oom,<strong>E</strong>xit). Kijáratból viszont csak egy van, és a királylány  csak ezen keresztül menekülhet meg. Ezeket a  hountedhouse nevű csomagban találod.</p>
+<p><strong>Ami kell:<br />
+</strong><strong>2-esért:</strong><br />
+  Írj egy  <strong>királylány</strong> <strong>taszkot</strong>, aminek van egy pozíció típusú változója (a megadott  csomagban találod a típust), ez kezdetben az (1,3)-as mező. Továbbá legyen egy  élet változója (természetes szám, ez kezdetben legyen 3), ami csökkenhet az ijesztgetések miatt.</p>
+<p>A királylány csak  a folyósókon hallja meg (feltételes belépési pont) a szellemek riogatását, de egyszerre  csak egyet. Ha meghall egy riogatást (létrejön a randevú), akkor a királylány a  következőket teszi:</p>
+<div class="inner"><p>- ha az észrevett szellem ugyanott tartózkodik (belépési  pont paramétere), ahol ő, akkor a sokk hatására életerejéből egy egységet  veszít<br />
+- 
+majd a képernyőre kiáltja, hogy megijedt és hogy mennyi  életereje maradt<br /></p></div>
+<p> Ha az  életereje 1 alá csökken, akkor sajnos halálra rémül. :(<br />
+  <br />
+  Írd meg a  <strong>kísértet</strong> <strong>taszk típust,</strong> aminek szintén van egy pozíció változója.<br />
+  A kísértetek  sorrendben a következőket teszik:<br /></p>
+  <div class="inner"><p>
+  - átugranak egy véletlen (bármilyen) helyre a kastélyban (a hauntedhouse csomag GetRandPos függvényével)<br />
+  - megpróbálják megijeszteni a királylányt, felfedve ezzel hollétüket (belépési pont hívás paraméterrel)<br />
+  - szusszannak 2 percet<br /></p></div>
+  <p>Mindezt addig  folytatják, amíg a királylány a kastélyban van, és még él (tasknév'Callable).</p>
+<p><em>Hozz létre  2-3 statikus szellemet (tömbben)!</em></p>
+<p><em>A feladatban az időt a Duration típussal szimuláld úgy, hogy <strong>0.1 = 1 perc</strong>!</em></p>
+<p><br/><strong>Plusz  jegyekért külön-külön megoldható egységek:</strong></p>
+<ul id="exercises">
+  <li>1. feladatcsoport:<br />
+    <ul>
+    <li>A szellemek  is adjanak jelt magukról, mondjuk a képernyőre huhogják a saját pozíciójukat minden  ijesztés előtt (pl.: „Szellem: (2,4)”)    </li>
+    <li>Így azonban  már összekeveredhet az output, így írj egy <strong>védett  egységet</strong>, amin keresztül történik az összes kiíratás (Próbáld meg ezt külön  fordítási egységként elkészíteni egy csomagban!)</li>
+    </ul>
+  </li>
+  <li>2. feladatcsoport:<br />
+    <ul>
+    <li>A szellemek  szeretnek dinamikusak lenni :), így írj egy <strong>Varázsló</strong> <strong>taszk típust</strong>, amelyik majd  létre tudja hozni őket. A Varázsló taszk típusnak legyen egy varázspálcája  (mutató), amivel szellemekre mutogathat, illetve legyen két diszkriminánsa:
+   <div class="inner">- mennyi  szellemet készül megidézni (pozitív szám)<br />
+  - meddig tart  egy szellem megidézése (access Duration)<br /></div>
+  A  Varázsló a következőt teszi:<br />
+  <div class="inner">- felkészül a  szellemidézésre (várakozás a kapott ideig)<br />
+  - létrehoz egy  szellemet, akinek azonosítóként az aktuális idézés sorszámát adja, illetve (sorszám*szellemidézés_idő)-nyi  időt, ami majd a szellem „türelme” lesz<br /></div>
+  Mindezt annyiszor, amennyi szellemet meg kell idézzen.</li>
+  <li>
+  Ennek  megfelelően írd át a kísértet taszk típust úgy, hogy diszkriminánsként tudja  fogadni az ő sorszámát, és az ő „türelmét”.<br />
+  Ezek után a szellemek  úgy kísértsenek, hogy legfeljebb „türelem”-nyi időt várnak, hogy a királylány  meghallja őket (időhöz kötött hívás)  </li>
+  <li><em>Hozd létre Kartoffel grófot, aki 5 szellemet idéz meg, mindegyiket 2 perc alatt!</em></li>
+    </ul>
+  </li>
+
+  <li>3. feladatcsoport:<br />
+    <ul>
+    <li>Van ugyan egy kijárat  a kastélyban, de a királylány ácsorogva nem fogja megtalálni... Adj neki  esélyt, azaz írj neki egy Lép eljárást, ami a következőképp működjön:<br />
+  <div class="inner">- kérünk egy  véletlen irányt<br />
+  - megnézzük,  hogy megengedett-e arra lépnünk (a hauntedhouse csomag IsCorrect függvénye ezt eldönti  egy pozícióról)<br />
+  - ha ok, akkor  lépjünk át oda, különben pedig próbálkozzunk ismét</div></li>
+<li>Ezek után a királylány a következőképp  viselkedjen:<br />
+  <div class="inner">- továbbra is  csak folyósókon hallja meg a szellemeket, de minden helyen csak 10 percig marad,  azután tovább lép<br />
+  - ha  kijáratot talál, akkor felkiált, hogy kijutott, és megmenekül.</div>
+    </li>
+    <li>Segítség a véletlen irány előállításához:<br/>
+    	A megadott tools csomag tartalmaz egy sabloncsomagot, amiből véletlen-generátort hozhatsz létre tetszőleges diszkrét típusra.
+        <br/>Példa:<br/> <div class="inner"><code>type Szinek is (piros,fehér,zöld);<br/>
+      					package Szin_Generator is new tools.Random_Generator(Szinek);<br />
+		  szin: Szinek := Szin_Generator.GetRandom;</code></div></li>
+    </ul>
+  </li>
+  
+  <li>4. feladatcsoport:<br />
+    <ul>
+    <li>A királylánynak van  egy segítője, Joe a jó szellem. Joe bármikor szívesen segít kivédeni egy  ijesztést, de csak akkor, ha még nem segített 3-szor (feltételes hívásfogadás). Egyébként „terminálódik a  fénybe”. :)<br />
+  Azonban ha segít, akkor utána Kartoffel gróf büntetésből 30 percig takaríttatja vele a kastélyt.</li>
+<li>Írd meg Joe taszkot úgy, hogy segítségül tudja hívni őt a királylány!</li>
+<li>Továbbá írd át a  királylány taszkot a következőképp:<br />
+  <div class="inner">- ha meghallott egy  ijesztést ami vele egy helyről jött, akkor ha Joe még létezik, segítséget  próbál kérni tőle. Ha ez sikerül <strong>rögtön</strong>, akkor nem veszít életerejéből.<br/>- minden más  esetben ugyanúgy megijed, mint eddig.</div> 
+    </li>
+    </ul>
+  </li>  
+</ul>
+
+<p>Eredményes munkát kívánunk!</p>
+<div width="100%" align="center"><img border="2" src="hh.jpg" alt="hh" /></div>
+</div>
+</body>
+</html>
