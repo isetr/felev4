@@ -1,0 +1,3 @@
+Magyarorszag: 4
+Egyesult Allamok: 2
+Franciaorszag: 1

@@ -1,0 +1,3 @@
+Magyarorszag: <3, 0, 1>
+Franciaorszag: <1, 0, 0>
+Egyesult Allamok: <0, 2, 0>

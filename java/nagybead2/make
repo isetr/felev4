@@ -1,0 +1,1 @@
+javac championships\results\ranking\*.java && javac championships\results\*.java && javac Tester.java && java Tester

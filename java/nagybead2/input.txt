@@ -1,0 +1,27 @@
+// A 2015-os uszo vb reszleges eredmenyei
+// Ezek a kommentsorok, mint a formatumnak nem megfelelo sorok, kihagyasra kerulnek, nem "rontjak el" az inputot.
+// Az egyszeru beolvasas erdekeben ez a fajl ekezetmentes.
+
+50 m ferfi gyors;Florent Manaudou;Franciaorszag;1
+
+50 m ferfi gyors;hibas;hibas;1
+// Az elozo sor hibas, mert ujra akar definialni egy mar ismert eredmenyt.
+
+50 m ferfi gyors;Takacs Krisztian;Magyarorszag;8
+50 m ferfi gyors;Nathan Adrian;Egyesult Allamok;2
+
+// par hibas sor
+;akfaa;feaf;2
+asfe;;fea;3
+faeefja;feafae;;3
+feafe;efjaee;efja;feaf
+hzre4;gas;fae;-2
+agh5;fa;grw;0
+
+
+200 m noi hat;Missy Franklin;Egyesult Allamok;2
+200 m noi hat;Hosszu Katinka;Magyarorszag;3
+
+200 m ferfi pillango;Cseh Laszlo;Magyarorszag;1
+200 m vegyes;Hosszu Katinka;Magyarorszag;1
+400 m vegyes;Hosszu Katinka;Magyarorszag;1
