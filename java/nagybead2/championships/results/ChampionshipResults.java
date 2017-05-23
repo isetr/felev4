@@ -9,14 +9,14 @@ import java.lang.IllegalArgumentException;
 import championships.results.ranking.*;
 
 public class ChampionshipResults implements Results {
-    Map<String, List<Participant>> events;
+    private Map<String, List<Participant>> events;
 
     public ChampionshipResults() {
         events = new HashMap<>();
     }
 
     public void addResult(String event, Participant participant, int place) throws IllegalArgumentException {
-        if (event == null || event == "" || place < 0) throw new IllegalArgumentException();
+        if (event == null || event.equals("") || place < 0) throw new IllegalArgumentException();
 
         List<Participant> tempList = events.getOrDefault(event, new ArrayList<>());
         if(tempList.size() < place) {
@@ -33,7 +33,7 @@ public class ChampionshipResults implements Results {
     }
 
     public void addResult(String event, String name, String nation, int place) throws IllegalArgumentException {
-        if(name == null || name == "" || nation == null || nation == "") throw new IllegalArgumentException();
+        if(name == null || name.equals("") || nation == null || nation.equals("")) throw new IllegalArgumentException();
         
         addResult(event, new Person(name, nation), place);
     }

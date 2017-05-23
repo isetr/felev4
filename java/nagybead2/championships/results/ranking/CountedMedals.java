@@ -3,7 +3,7 @@ package championships.results.ranking;
 import championships.results.ranking.*;
 
 public class CountedMedals implements Medals {
-    int bronze, silver, gold;
+    private int bronze, silver, gold;
 
     public CountedMedals(int gold, int silver, int bronze) {
         this.bronze = bronze;

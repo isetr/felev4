@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import championships.results.Participant;
 
 public class TotalMedalsRanking implements Ranking<Integer> {
-    Map<String, List<Participant>> events;
+    private Map<String, List<Participant>> events;
 
     public TotalMedalsRanking(Map<String, List<Participant>> events) {
         this.events = events;
