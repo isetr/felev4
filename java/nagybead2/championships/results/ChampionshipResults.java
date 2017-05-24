@@ -39,11 +39,19 @@ public class ChampionshipResults implements Results {
     }
 
     public List<Participant> getResultsOf(String event) {
-        return events.get(event);
+        List<Participant> out = new ArrayList<>();
+        for(Participant p : events.get(event)) {
+            out.add(new Person(p.getName(), p.getNation()));
+        }
+        return out;
     }
 
     public Map<String,List<Participant>> getResultsOfAll() {
-        return events;
+        Map<String,List<Participant>> out = new HashMap<>();
+        events.forEach((k, v) -> {
+            out.put(k, getResultsOf(k));
+        });
+        return out;
     }
 
     public Ranking<Medals> rankNationsByGoldFirst() {
