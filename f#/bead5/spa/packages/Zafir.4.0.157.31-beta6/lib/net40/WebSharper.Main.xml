@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>WebSharper.Main</name></assembly>
+<members>
+<member name="T:WebSharper.IControl">
+<summary>
+ An interface that has to be implemented by controls that
+ are subject to activation, ie. server-side controls that
+ contain client-side elements.
+</summary>
+</member>
+<member name="M:WebSharper.IControlBody.ReplaceInDom(WebSharper.JavaScript.Dom.Node)">
+<summary>
+ Replace the given node with the HTML content.
+ The node is guaranteed to be present in the DOM.
+ Called exactly once on startup on an IControl&apos;s Body.
+</summary>
+</member>
+<member name="T:WebSharper.IControlBody">
+<summary>
+ HTML content that can be used as the Body of a web Control.
+ Can be zero, one or many DOM nodes.
+</summary>
+</member>
+<member name="T:WebSharper.IRequiresResources">
+<summary>
+ An interface that has to be implemented by controls
+ that depend on resources.
+</summary>
+</member>
+<member name="T:WebSharper.MacroModule">
+<summary>
+ Defines macros used by proxy definitions.
+</summary>
+</member>
+<member name="T:WebSharper.Pervasives.RpcAttribute">
+<summary>
+ Marks a server-side function to be invokable remotely from the client-side.
+</summary>
+</member>
+<member name="M:WebSharper.Pervasives.op_BarGreaterBang``1(``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Implements piping with mutation.
+</summary>
+</member>
+<member name="M:WebSharper.Pervasives.AddRpcHandler(System.Type,System.Object)">
+<summary>
+ Re-exports Remoting.AddHandler.
+</summary>
+</member>
+<member name="T:WebSharper.Pervasives">
+<summary>
+ Defines operators and functions that are automatically available whenever
+ `WebSharper` is open.
+</summary>
+</member>
+<member name="M:WebSharper.Json.Resource.#ctor">
+<summary>
+ Constructs a new instance.
+</summary>
+</member>
+<member name="T:WebSharper.Json.Resource">
+<summary>
+ Represents the IE7-compatibility JSON resource.
+</summary>
+</member>
+<member name="M:WebSharper.Json.Activate``1(System.Object)">
+<summary>
+ Parses a JSON object returned by the server.
+</summary>
+</member>
+<member name="M:WebSharper.Json.Stringify(System.Object)">
+<summary>
+ Converts a JavaScript object to a JSON string.
+ For type-aware serialization compatible with Sitelets, see Json.Serialize.
+</summary>
+</member>
+<member name="M:WebSharper.Json.Parse(System.String)">
+<summary>
+ Reads a JSON string into a JavaScript object.
+ For type-aware deserialization compatible with Sitelets, see Json.Deserialize.
+</summary>
+</member>
+<member name="T:WebSharper.Json">
+<summary>
+ Implements JSON encoding and decoding for client-server interaction.
+</summary>
+</member>
+<member name="T:WebSharper.PrintfHelpers">
+<summary>
+ Defines macros used by proxy definitions.
+</summary>
+</member>
+<member name="T:WebSharper.Concurrency">
+<summary>
+ Implements concurrency primitives.
+</summary>
+</member>
+<member name="T:WebSharper.Enumerator.T`2">
+<summary>
+ Represents an unfolding enumerator.
+</summary>
+</member>
+<member name="M:WebSharper.Enumerator.New``2(``0,Microsoft.FSharp.Core.FSharpFunc{WebSharper.Enumerator.T{``0,``1},System.Boolean})">
+<summary>
+ Constructs a new `IEnumerator` by unfolding a function.
+</summary>
+</member>
+<member name="T:WebSharper.Enumerator">
+<summary>
+ Provides an `IEnumerator` implementation.
+</summary>
+</member>
+<member name="M:WebSharper.Enumerable.Of``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,System.Collections.Generic.IEnumerator{``0}})">
+<summary>
+ Constructs an `IEnumerable`.
+</summary>
+</member>
+<member name="T:WebSharper.Enumerable">
+<summary>
+ Provides an `IEnumerable` implementation.
+</summary>
+</member>
+<member name="T:WebSharper.Resources.IResource">
+<summary>
+ Re-exports IResource.
+</summary>
+</member>
+<member name="T:WebSharper.Resources.Runtime">
+<summary>
+ Re-exports Runtime.
+</summary>
+</member>
+<member name="T:WebSharper.Resources.Context">
+<summary>
+ Re-exports Context.
+</summary>
+</member>
+<member name="T:WebSharper.Resources.BaseResource">
+<summary>
+ Re-exports BaseResource.
+</summary>
+</member>
+<member name="T:WebSharper.Resources">
+<summary>
+ Re-exports functionality from WebSharper.Core.Resources.
+</summary>
+</member>
+<member name="P:WebSharper.Activator.META_ID">
+<summary>
+ The identifier of the meta tag holding the controls.
+</summary>
+</member>
+<member name="M:WebSharper.HtmlContentExtensions.IControlBody.SingleNode.Static(WebSharper.JavaScript.Dom.Node)">
+<summary>
+ Create HTML content comprised of a single DOM node.
+</summary>
+</member>
+<member name="T:WebSharper.JavaScript.JSModule.Handle">
+<summary>
+ Represents a timer handle.
+</summary>
+</member>
+<member name="T:WebSharper.JavaScript.JSModule.Kind">
+<summary>
+ Enumerates JavaScript value kinds.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.CancelAnimationFrame(WebSharper.JavaScript.JSModule.Handle)">
+<summary>
+ Cancels an animation frame request.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.RequestAnimationFrame(Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Requests a function to be called on the next animation frame.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Set(System.Object,System.String,System.Object)">
+<summary>
+ Sets a given field on an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Get``1(System.String,System.Object)">
+<summary>
+ Gets a given field from an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.LogMore``1(``0)">
+<summary>
+ Logs an array or tuple to console if one is defined.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Log(System.Object)">
+<summary>
+ Logs the given object to console if one is defined.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.InstanceOf(System.Object,System.Object)">
+<summary>
+ Tests if an object is an instance of a given class.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.ForEach(System.Object,Microsoft.FSharp.Core.FSharpFunc{System.String,System.Boolean})">
+<summary>
+ Iterates over the fields of a JavaScript object.
+ Iteration can be terminated by returning `true`.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.TypeOf(System.Object)">
+<summary>
+ Applies the JavaScript `typeof` operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.New``1(System.Object)">
+<summary>
+ Constructs a new object with a given constructor function.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.GetFieldValues(System.Object)">
+<summary>
+ Retrieves the values of all proper fields from an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.GetFieldNames(System.Object)">
+<summary>
+ Retrieves the names of all proper fields from an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.GetFields(System.Object)">
+<summary>
+ Retrieves all proper fields from an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.In(System.String,System.Object)">
+<summary>
+ Tests if the object has or inherits a property.
+ Implemented with the &quot;in&quot; operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.HasOwnProperty(System.Object,System.String)">
+<summary>
+ Tests if the object contains a property.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Delete(System.Object,System.String)">
+<summary>
+ Deletes a field from a JavaScript object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Apply``1(System.Object,System.String,System.Object[])">
+<summary>
+ Performs JavaScript function application.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.ClearInterval(WebSharper.JavaScript.JSModule.Handle)">
+<summary>
+ Clears a scheduled interval function.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.ClearTimeout(WebSharper.JavaScript.JSModule.Handle)">
+<summary>
+ Clears a scheduled timeout function.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.SetInterval(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit},System.Int32)">
+<summary>
+ Schedules the function for execution once every
+ given number of microseconds.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.SetTimeout(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit},System.Int32)">
+<summary>
+ Schedules the function for execution in the
+ given number of microseconds.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Prompt(System.String,System.String)">
+<summary>
+ Displays a popup dialog with a text input box, returns the value entered by the user.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Confirm(System.String)">
+<summary>
+ Displays a popup dialog with Yes and No buttons, returns the choice.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Alert(System.String)">
+<summary>
+ Displays a popup dialog.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Not(System.Object)">
+<summary>
+ Exposes the JavaScript `!x` operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.BitwiseNot``1(System.Object)">
+<summary>
+ Exposes the JavaScript `~x` operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Minus``1(System.Object)">
+<summary>
+ Exposes the JavaScript `-x` operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Plus``1(System.Object)">
+<summary>
+ Exposes the JavaScript `+x` operator.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Void(System.Object)">
+<summary>
+ Ignores the value of an expression.
+</summary>
+</member>
+<member name="P:WebSharper.JavaScript.JSModule.Global">
+<summary>
+ Returns the reference to the global JavaScript object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.JSModule.Undefined``1">
+<summary>
+ Constructs a JavaScript &quot;undefined&quot; value.
+</summary>
+</member>
+<member name="T:WebSharper.JavaScript.JSModule">
+<summary>
+ Defines common JavaScript operations.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.JS.Inline``1(System.String,System.Object[])">
+<summary>
+ Parses and inlines JavaScript code
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.DefaultToUndefined``1(``0)">
+<summary>
+ Erases generic parameters inside this expression during WebSharper translation.
+ You can get use this to translate `defaultof` inside a generic function.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.GetJS``1(System.Object,System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Gets JavaScript properties in sequence dynamically from an object.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Remote``1">
+<summary>
+ Constructs an proxy to a remote object instance.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.New``1(System.Collections.Generic.IEnumerable{System.Tuple{System.String,System.Object}})">
+<summary>
+ Constructs a new object as if an object literal was used.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.As``1(System.Object)">
+<summary>
+ Casts an object to the desired type.
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice7``7(WebSharper.JavaScript.Union{``0,``1,``2,``3,``4,``5,``6})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice7``7(Microsoft.FSharp.Core.FSharpChoice{``0,``1,``2,``3,``4,``5,``6})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice6``6(WebSharper.JavaScript.Union{``0,``1,``2,``3,``4,``5})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice6``6(Microsoft.FSharp.Core.FSharpChoice{``0,``1,``2,``3,``4,``5})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice5``5(WebSharper.JavaScript.Union{``0,``1,``2,``3,``4})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice5``5(Microsoft.FSharp.Core.FSharpChoice{``0,``1,``2,``3,``4})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice4``4(WebSharper.JavaScript.Union{``0,``1,``2,``3})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice4``4(Microsoft.FSharp.Core.FSharpChoice{``0,``1,``2,``3})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice3``3(WebSharper.JavaScript.Union{``0,``1,``2})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice3``3(Microsoft.FSharp.Core.FSharpChoice{``0,``1,``2})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.toChoice2``2(WebSharper.JavaScript.Union{``0,``1})">
+<summary>
+ Converts a JavaScript erased union to an F# Choice value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Union.ofChoice2``2(Microsoft.FSharp.Core.FSharpChoice{``0,``1})">
+<summary>
+ Converts an F# Choice value to a JavaScript erased union
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Optional.toOption``1(WebSharper.JavaScript.Optional{``0})">
+<summary>
+ Converts a JavaScript erased option to an F# option value
+</summary>
+</member>
+<member name="M:WebSharper.JavaScript.Pervasives.Optional.ofOption``1(Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Converts an F# option value to a JavaScript erased option
+</summary>
+</member>
+<member name="T:WebSharper.JavaScript.Pervasives">
+<summary>
+ Defines operators and functions that are automatically available whenever
+ `WebSharper` is open.
+</summary>
+</member>
+<member name="T:WebSharper.CollectionInternals">
+<summary>
+ Provides seq/list/array proxies
+</summary>
+</member>
+<member name="T:WebSharper.Collections.Dictionary`2">
+<summary>
+ Implements a proxy for the .NET dictionary.
+</summary>
+</member>
+<member name="M:WebSharper.SeqModuleProxy.Cast``1(System.Collections.IEnumerable)">
+<summary>
+ IEnumerable is not supported.
+</summary>
+</member>
+<member name="M:WebSharper.UncheckedProxy.Hash``1(``0)">
+<summary>
+ Computes the hash of an object.
+</summary>
+</member>
+<member name="M:WebSharper.UncheckedProxy.Equals``1(``0,``0)">
+<summary>
+ Tests if two values are equal.
+</summary>
+</member>
+<member name="M:WebSharper.UncheckedProxy.DefaultOf``1">
+<summary>
+ Produces an undefined value.
+</summary>
+</member>
+<member name="M:WebSharper.UncheckedProxy.Compare``1(``0,``0)">
+<summary>
+ Compares two values generically.
+</summary>
+</member>
+<member name="T:WebSharper.UncheckedProxy">
+<summary>
+ Implements generic comparison, equality and hashing.
+</summary>
+</member>
+</members>
+</doc>

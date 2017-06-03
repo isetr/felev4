@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>WebSharper.JavaScript</name>
+  </assembly>
+  <member name="M:WebSharper.JavaScript.Dom.Range.Collapse">
+    <summary>The toStart parameter defaults to false</summary>
+  </member>
+  <member name="M:WebSharper.JavaScript.Dom.Element.GetAttributeNames">
+    <summary>Warning: This method is not available in every browser, but it's part of the specification.</summary>
+  </member>
+  <member name="P:WebSharper.JavaScript.Dom.Document.Timeline">
+    <summary>Warning: This method is not supported in every browser.</summary>
+  </member>
+  <member name="M:WebSharper.JavaScript.HTMLInputElement.StepDown">
+    <summary>The paramter deafults to 1</summary>
+  </member>
+  <member name="M:WebSharper.JavaScript.HTMLInputElement.StepDown(System.Int32)">
+    <summary>The paramter deafults to 1</summary>
+  </member>
+  <member name="M:WebSharper.JavaScript.HTMLInputElement.StepUp">
+    <summary>The paramter deafults to 1</summary>
+  </member>
+  <member name="M:WebSharper.JavaScript.HTMLInputElement.StepUp(System.Int32)">
+    <summary>The paramter deafults to 1</summary>
+  </member>
+</doc>
