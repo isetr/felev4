@@ -5,4 +5,4 @@ allow('POST');
 
 unset($_SESSION['logged_in']);
 
-redirect('login.php');
+redirect('index.php');
